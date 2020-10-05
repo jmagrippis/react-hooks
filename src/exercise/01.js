@@ -3,12 +3,12 @@
 
 import React from 'react'
 
-function Greeting() {
+function Greeting({initialName}) {
   // 💣 delete this variable declaration and replace it with a React.useState call
-  const name = ''
+  const [name, setName] = React.useState(initialName)
 
   function handleChange(event) {
-    // 🐨 update the name here based on event.target.value
+    setName(event.target.value)
   }
 
   return (
@@ -20,6 +20,10 @@ function Greeting() {
       {name ? <strong>Hello {name}</strong> : 'Please type your name'}
     </div>
   )
+}
+
+Greeting.defaultProps = {
+  initialName: '',
 }
 
 function App() {

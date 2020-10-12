@@ -1,15 +1,15 @@
 import React from 'react'
 import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import App from '../final/04.extra-3'
-// import App from '../exercise/04'
+
+import App from '../exercise/04.extra-3'
 
 test('can play a game of tic tac toe', () => {
   render(<App />)
   // prettier-ignore
   const [
-    s1, s2, s3,
-    s4, s5, s6,
+    s1, s2, s3,// eslint-disable-line no-unused-vars
+    s4, s5, s6,// eslint-disable-line no-unused-vars
     s7, s8, s9 // eslint-disable-line no-unused-vars
   ] = Array.from(screen.queryAllByRole('button'))
   expect(screen.getByText('Next player: X')).toBeInTheDocument()

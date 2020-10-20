@@ -32,7 +32,7 @@ function fetchPokemon(name, delay = 1500) {
       method: 'POST',
       headers: {
         'content-type': 'application/json;charset=UTF-8',
-        delay: delay,
+        delay,
       },
       body: JSON.stringify({
         query: pokemonQuery,
